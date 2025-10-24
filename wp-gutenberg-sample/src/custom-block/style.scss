@@ -1,0 +1,110 @@
+// ======================================
+// Variables
+// ======================================
+$primary-gradient: linear-gradient(135deg, #4facfe, #00f2fe);
+$text-color: #fff;
+$overlay-color: rgba(0,0,0,0.6);
+$transition-speed: 0.8s;
+
+// ======================================
+// Animations
+// ======================================
+@keyframes fadeInUp {
+	from { opacity: 0; transform: translateY(20px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+	from { opacity: 0; transform: translateX(50px); }
+	to { opacity: 1; transform: translateX(0); }
+}
+
+// ======================================
+// Hero Gradient Block
+// ======================================
+.hero-banner {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 350px;
+	padding: 2rem;
+	text-align: center;
+	color: $text-color;
+	background: $primary-gradient;
+	overflow: hidden;
+	border-radius: 12px;
+	transition: all $transition-speed ease-in-out;
+
+	&::after {
+	content: '';
+		position: absolute;
+		inset: 0;
+		background-color: $overlay-color;
+		z-index: 0;
+	}
+
+
+	&.align-left {
+		justify-content: flex-start;
+		text-align: left;
+
+		h1 {
+			animation: slideInRight $transition-speed forwards;
+		}
+
+		p {
+			animation: slideInRight $transition-speed ease-in-out 0.2s;
+		}
+	}
+
+	&.align-center {
+		justify-content: center;
+		text-align: center;
+
+		h1 {
+			animation: fadeInUp $transition-speed forwards;
+		}
+
+		p {
+			animation: fadeInUp $transition-speed ease-in-out 0.2s;
+		}
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 2;
+		max-width: 800px;
+
+		h2 {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			font-size: 1.25rem;
+			max-width: 600px;
+		}
+	}
+
+	// Responsive
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 2rem;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		h1 {
+			font-size: 1.5rem;
+		}
+
+		p {
+			font-size: 0.9rem;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+  "name": "wp-gutenberg-sample",
+  "version": "1.0.0",
+  "main": "build/custom-block/index.js",
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build",
+    "lint:js": "wp-scripts lint-js",
+    "format": "wp-scripts format"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@wordpress/element": "^6.33.0",
+    "@wordpress/scripts": "^30.26.0"
+  },
+  "dependencies": {
+    "@wordpress/block-editor": "^15.6.0",
+    "@wordpress/components": "^30.6.0",
+    "@wordpress/data": "^10.33.0",
+    "@wordpress/i18n": "^6.6.0"
+  }
+}

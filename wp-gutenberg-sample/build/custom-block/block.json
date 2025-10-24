@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "bpnb/gradient-banner",
+  "version": "1.3.0",
+  "title": "Gradient Banner",
+  "category": "layout",
+  "icon": "cover-image",
+  "description": "A banner with a overlay and customizable text.",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": "h1"
+    },
+    "subtitle": {
+      "type": "string",
+      "source": "html",
+      "selector": "p"
+    },
+    "backgroundImage": {
+      "type": "string"
+    },
+    "overlayColor": {
+      "type": "string",
+      "default": "rgba(0,0,0,0.6)"
+    },
+    "overlayOpacity": {
+      "type": "number",
+      "default": 0.5
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "heroHeight": {
+      "type": "number",
+      "default": 350
+    },
+    "textAlignment": {
+      "type": "string",
+      "default": "center"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}

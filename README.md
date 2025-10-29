@@ -1,7 +1,7 @@
 ### WordPress + Gutenberg Code Sample
 
 **Overview:**
-This sample demonstrates a modern WordPress development workflow with Gutenberg, React, and SCSS, focusing on flexibility, performance, and clean design.
+This sample demonstrates a modern WordPress development workflow with Gutenberg, React, and SCSS, focusing on flexibility, performance, and clean design. Note: Tested on Twenty Twenty-Five default theme.
 
 **Included:**
 1. A full-site editing template using a dynamic PHP date.
